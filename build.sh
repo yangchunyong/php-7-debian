@@ -19,10 +19,9 @@ sudo apt-get install -y \
 
 sudo mkdir /usr/local/php7
 
-git clone https://github.com/php/php-src.git
-cd php-src
-git checkout PHP-7.0.0
-git pull
+wget http://cn2.php.net/get/php-7.0.0.tar.gz/from/this/mirror
+tar xf mirror
+cd php-7.0.0
 ./buildconf --force
 
 CONFIGURE_STRING="--prefix=/usr/local/php7 \
